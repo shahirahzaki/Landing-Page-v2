@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilates - My exercise 💪</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+        /* background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/129/617/original/brunette-girl-doing-pilates-exercise-for-the-royalty-free-image-1660039849.jpg?1718885550");
+        background-size: cover; or background-repeat: no-repeat */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      a {
+        text-decoration: none;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid #B8935F;
+        background: #B8935F;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        border-radius: 30px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+        
+      }
+      button:hover {
+        background: white;
+        color:#B8935F;
+        cursor: pointer;
+      }
+      footer {
+        text-align: center;
+        margin: 15px 0;
+        font-size: 18px;
+      }
+      .container {
+        max-width: 600px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+      }
+      .theme-button {
+        font-size: 12px;
+        font-weight: 700;
+        background: black;
+        color: white;
+        padding: 10px 12px;
+        margin: 20px auto;
+        border: 1px solid black;
+        text-transform: uppercase;
+      }
+      .theme-button:hover {
+        color: black;
+        background: white;
+      }
+      .pilates-intro-picture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out; /*filter 150ms ease-in - can specify each animation's transition*/
+      }
+      .pilates-intro-picture:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+      .grid {
+        margin: 5px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        transition: all 200ms ease-in-out;
+        /*object-fit: cover; or aspect-ratio: 1/16; - if the images are diff sizes*/
+      }
+      .grid img:hover {
+        transform: scale(2);
+      }
+      .dark {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(87, 108, 117) 0%,
+          rgb(37, 50, 55) 100.2%
+        );
+        color: white;
+      }
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark a {
+        color: #d7d9c3;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+      <h1>🤸‍♀️ What is Pilates?</h1>
+      <h2>My favorite type of exercise</h2>
+      <a
+        href="https://www.betterhealth.vic.gov.au/pilates-health-benefits"
+        target="_blank"
+      >
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/129/622/original/landscapewidedesktop2x-45af3d05105b0325061f6775622170df-bobsylvheader16-9.jpg?1718886638"
+          alt=""
+          class="pilates-intro-picture"
+      /></a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/129/618/original/Pilates-27bb0ee84f994f7fb370dde3b4cbf37f.jpg?1718885558"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/129/620/original/Pilates-for-Men.jpg?1718885623"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/129/617/original/brunette-girl-doing-pilates-exercise-for-the-royalty-free-image-1660039849.jpg?1718885550"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/129/823/original/2887775_1600x0.jpg?1718979618"
+          alt=""
+        />
+      </div>
+      <p>
+        Pilates is a type of mind-body exercise developed in the early 20th
+        century by German physical trainer Joseph Pilates, after whom it was
+        named. Pilates called his method "Contrology".
+      </p>
+      <p>
+        <a href="https://en.wikipedia.org/wiki/Pilates">Read on Wikipedia 🕮</a>
+      </p>
+      <button class="contact-button">Learn Pilates with us now</button>
+    </div>
+    <footer>
+      Coded with ❤️ by
+      <a href="https://github.com/shahirahzaki" target="_blank">Nurul S.</a>
+    </footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        // body.classList.toggle("dark");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      function getDetails() {
+        let experience = prompt("Have you taken any Pilates class before?");
+        let name = prompt("What is your full name?");
+        let email = prompt("What is your email?");
+        alert(`Thank you ${name}. We'll be in touch with you soon. Do contact us for any enquiries at hello@shecodes.io. 🧘🏻‍♀️`);
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+
+      let contactButton = document.querySelector(".contact-button");
+      contactButton.addEventListener("click", getDetails);
+    </script>
+  </body>
+</html>
